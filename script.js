@@ -17,7 +17,7 @@ function computerPlay(){
     }
     return hand;
 }
-function gamePlay(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     let message;
     switch (playerSelection){
