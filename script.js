@@ -103,7 +103,13 @@ function game(){
     else{
         console.log(`You tied ${humanScore} to ${computerScore}.`);
     }
+    playAgain = prompt("Enter x to play again","");
+    if (playAgain === "x"){
+        game();
+    }
 }
 
 let computerScore;
 let humanScore;
+
+game();
