@@ -25,14 +25,14 @@ function playRound(playerSelection, computerSelection) {
         case "rock":
             switch (computerSelection) {
                 case "rock":
-                    message = "You Tie!";
+                    message = "You Tie!.";
                     break;
                 case "paper":
-                    message = "You Lose! Paper beats Rock";
+                    message = "You Lose! Paper beats Rock.";
                     computerScore++;
                     break;
                 case "scissors":
-                    message = "You Win! Rock beats Scissors";
+                    message = "You Win! Rock beats Scissors.";
                     humanScore++;
                     break;
             }
@@ -41,14 +41,14 @@ function playRound(playerSelection, computerSelection) {
             
             switch (computerSelection) {
                 case "rock":
-                    message = "You Win! Paper beats Rock";
+                    message = "You Win! Paper beats Rock.";
                     humanScore++;
                     break;
                 case "paper":
-                    message = "You Tie!";
+                    message = "You Tie!.";
                     break;
                 case "scissors":
-                    message = "You Lose! Scissors beat Paper";
+                    message = "You Lose! Scissors beat Paper.";
                     computerScore++;
                     break;
             }
@@ -57,15 +57,15 @@ function playRound(playerSelection, computerSelection) {
             
             switch (computerSelection) {
                 case "rock":
-                    message = "You Lose! Rock beats Scissors";
+                    message = "You Lose! Rock beats Scissors.";
                     computerScore++;
                     break;
                 case "paper":
-                    message = "You Win! Scissors beat Paper";
+                    message = "You Win! Scissors beat Paper.";
                     humanScore++;
                     break;
                 case "scissors":
-                    message = "You Tie";
+                    message = "You Tie.";
                     break;
 
             }
@@ -80,7 +80,7 @@ function game(){
     computerScore = 0;
     humanScore = 0;
     for (let x = 0; x < 5; x++) {
-        playerSelection = prompt("Please enter Rock, Paper or Scissors","");
+        playerSelection = prompt("Please enter Rock, Paper or Scissors.","");
         computerSelection = computerPlay();
         console.log(`The computer has selected ${computerSelection}`);
         console.log(playRound(playerSelection, computerSelection));
@@ -103,7 +103,7 @@ function game(){
     else{
         console.log(`You tied ${humanScore} to ${computerScore}.`);
     }
-    playAgain = prompt("Enter x to play again","");
+    playAgain = prompt("Enter x to play again.","").toLowerCase();
     if (playAgain === "x"){
         game();
     }
